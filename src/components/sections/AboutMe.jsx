@@ -15,7 +15,7 @@ function AboutMe() {
   ];
 
   const experience = [
-    { title: "Desarrollador Full Stack", company: "Digital House", years: "2022 - 2023" },
+    { title: "Developer Full Stack", company: "Digital House", years: "2022 - 2023" },
    
   ];
 
