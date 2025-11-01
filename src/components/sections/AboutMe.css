@@ -1,0 +1,81 @@
+/* src/components/sections/AboutMe.css */
+
+.about-section {
+    padding: 60px 20px;
+    max-width: 900px; /* Limita el ancho para mejor lectura */
+    margin: 0 auto; /* Centra el contenido */
+    text-align: left;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.about-bio {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #495057;
+    margin-bottom: 40px;
+    border-left: 4px solid #007bff; /* Un detalle visual */
+    padding-left: 15px;
+}
+
+.about-section h3 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para la lista de valores */
+.about-values-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.about-values-list li {
+    font-size: 1rem;
+    padding: 8px 0;
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.about-values-list li:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para la lista de experiencia (Línea de tiempo simple) */
+.experience-list {
+    margin-top: 20px;
+}
+
+.experience-item {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-left: 3px solid #007bff; /* Línea de tiempo visual */
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.experience-item h4 {
+    margin: 0 0 5px 0;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.experience-item p {
+    margin: 0;
+    font-style: italic;
+    color: #6c757d;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 40px 0;
+}

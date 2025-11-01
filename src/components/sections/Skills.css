@@ -1,0 +1,77 @@
+/* src/components/sections/Skills.css */
+
+.skills-section {
+    padding: 60px 20px;
+    background-color: #f4f7f6; /* Un fondo gris claro para destacar la sección */
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.skills-section p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 40px;
+}
+
+/* Contenedor principal para organizar los grupos de habilidades */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    justify-content: center;
+    gap: 30px; /* Espacio entre las tarjetas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para cada grupo/tarjeta de habilidad */
+.skill-group {
+    flex-basis: 300px; /* Ancho base para cada tarjeta */
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.skill-group:hover {
+    transform: translateY(-5px); /* Pequeño efecto de elevación al pasar el ratón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-group h3 {
+    font-size: 1.5rem;
+    color: #007bff; /* Color de acento para el título de la categoría */
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.skill-item {
+    font-size: 1rem;
+    color: #495057;
+    padding: 5px 0;
+    border-bottom: 1px dotted #dee2e6; /* Línea punteada para separar elementos */
+}
+
+.skill-item:last-child {
+    border-bottom: none; /* Elimina la línea del último elemento */
+}
+
+/* Media Query: Diseño para dispositivos más pequeños */
+@media (max-width: 600px) {
+    .skill-group {
+        flex-basis: 100%; /* Las tarjetas ocupan todo el ancho en móviles */
+    }
+}

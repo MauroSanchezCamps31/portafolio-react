@@ -1,13 +1,41 @@
-body {
+/* src/index.css */
+
+/* 1. Reseteo Básico */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 2. Definición de Variables de Color */
+:root {
+  --primary-color: #007bff; /* Azul de acento */
+  --secondary-color: #34495e; /* Gris oscuro para texto */
+  --light-bg: #f8f9fa; /* Fondo muy claro */
+  --text-color: #212529;
+}
+
+/* 3. Estilos Globales de la App */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografía moderna */
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+  scroll-behavior: smooth; /* Desplazamiento suave para los enlaces de Navbar */
+}
+
+/* Estilo para enlaces globales */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0056b3; /* Tono más oscuro al pasar el ratón */
+}
+
+/* Ajuste de contenedor principal */
+.app-container {
+  overflow-x: hidden; /* Evita el scroll horizontal */
 }
