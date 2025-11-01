@@ -1,0 +1,66 @@
+/* 1. Estilos para la sección Hero (Contexto general) */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente el contenido del Hero */
+    text-align: center;
+    padding: 80px 20px; /* Espacio arriba y abajo */
+    background-color: #f4f7f6; /* Fondo suave para destacar */
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    color: #2c3e50; /* Color de texto oscuro y profesional */
+    margin-bottom: 5px;
+}
+
+.hero-section h2 {
+    font-size: 1.5em;
+    color: #3498db; /* Un color de acento azul */
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    max-width: 600px;
+    font-size: 1.1em;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* ---------------------------------------------------- */
+
+/* 2. Estilos del Botón de CV (.btn-cv) */
+.btn-cv {
+    /* Diseño base */
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: 600; /* Semi-negrilla */
+    text-decoration: none; /* Quitar el subrayado */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px;
+    
+    /* Colores y forma */
+    background-color: #e74c3c; /* Un rojo vivo (o cámbialo a #3498db si prefieres azul) */
+    color: white; 
+    border: none;
+    border-radius: 50px; /* Botón píldora/ovalado */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    
+    /* Transición para el efecto hover */
+    transition: all 0.3s ease;
+}
+
+/* 3. Efecto al pasar el mouse (Hover) */
+.btn-cv:hover {
+    background-color: #c0392b; /* Oscurece el color al pasar el mouse */
+    transform: translateY(-2px); /* Un pequeño levantamiento para darle vida */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+/* 4. Estilos para el estado activo (al presionar) */
+.btn-cv:active {
+    transform: translateY(0); /* Vuelve a su posición original */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}

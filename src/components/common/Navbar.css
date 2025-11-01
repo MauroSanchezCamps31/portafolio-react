@@ -1,15 +1,14 @@
-/* src/components/common/Navbar.css */
-
 .navbar-container {
-    background-color: #2c3e50; /* Un color oscuro elegante */
+    background-color: #2c3e50;
     color: white;
     display: flex;
-    justify-content: space-between; /* Espacia el logo y los enlaces */
+    /* CAMBIO: Ahora hay 3 elementos (logo, foto, enlaces). Usamos 'space-around' o 'space-between' */
+    justify-content: space-between; 
     align-items: center;
     padding: 15px 40px;
-    position: sticky; /* Se queda fijo al hacer scroll */
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -20,15 +19,33 @@
     font-weight: bold;
 }
 
+/* ⬅️ NUEVO: Estilos para la foto de perfil */
+.profile-picture-container {
+    /* Mueve el logo y los enlaces más a los lados, dejando espacio central */
+    margin-right: auto; /* Empuja los enlaces hacia la derecha */
+    margin-left: 20px; /* Espacio entre el logo y la foto */
+    order: 2; /* Asegura que se posicione entre el logo (1) y los enlaces (3) si cambias el justify-content a 'space-between' */
+}
+
+.profile-picture {
+    width: 40px; /* Tamaño de la imagen */
+    height: 40px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+    border: 2px solid white; /* Borde blanco sutil */
+    display: block;
+}
+
 .navbar-links {
-    list-style: none; /* Quita los puntos de la lista */
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    order: 3; /* Asegura que los enlaces se muestren a la derecha */
 }
 
 .navbar-links li {
-    margin-left: 25px; /* Espacio entre los enlaces */
+    margin-left: 25px;
 }
 
 .navbar-links a {
@@ -41,7 +58,7 @@
 }
 
 .navbar-links a:hover {
-    background-color: #34495e; /* Un tono un poco más claro al pasar el ratón */
+    background-color: #34495e;
 }
 
 /* Media Query para hacerlo responsive en móviles */
@@ -50,9 +67,23 @@
         flex-direction: column;
         padding: 15px 20px;
     }
+    
+    /* Reorganiza los elementos en móviles */
+    .navbar-logo {
+        order: 1;
+        margin-bottom: 10px;
+    }
+    
+    .profile-picture-container {
+        order: 2;
+        margin: 0 0 10px 0; /* Centra y añade espacio debajo */
+        margin-right: 0; /* Deshace el auto margin del escritorio */
+    }
+    
     .navbar-links {
+        order: 3;
         margin-top: 10px;
-        flex-direction: column; /* Apila los enlaces en móviles */
+        flex-direction: column;
         text-align: center;
     }
     .navbar-links li {

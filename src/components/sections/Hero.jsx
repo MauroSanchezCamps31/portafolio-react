@@ -1,25 +1,32 @@
-// src/components/sections/Hero.jsx
-
 import React from 'react';
-// Podrías importar tu foto aquí, ejemplo: import profileImage from '../../assets/profile.jpg';
+import './Hero.css'
+// ⚠️ Importación clave: Importa el PDF como un módulo para obtener su ruta correcta
+import curriculumPDF from '../assets/CV-MSC.pdf'; 
 
 function Hero() {
   const name = "Mauro Sanchez";
   const title = "Desarrollador Web y Programador de Software";
   const tagline = "Construyendo experiencias digitales accesibles y eficientes.";
 
-return (
+  // ⚠️ Tu código del enlace estaba aquí, ¡debe ir en el return!
+  
+  return (
     <section id="home" className="hero-section"> 
-      {/* ⚠️ ¡Asegúrate que no haya texto aquí! */}
-      <h1>{name}</h1> {/* Solo debe estar la variable {name} */}
+      <h1>{name}</h1>
       <h2>{title}</h2>
-      {/* ⚠️ ¡O aquí! */}
       <p>{tagline}</p>
       
-      {/* ... */}
+      {/* 🟢 Coloca el enlace dentro del return, usando la variable importada */}
+      <a 
+        href={curriculumPDF} // Usamos la variable importada
+        download="CV-MSC.pdf" // Nombre con el que se descarga
+        className="btn-cv" // Añade una clase para darle estilo CSS
+      >
+        Descargar mi Curriculum Vitae
+      </a>
+      
     </section>
   );
-    
 }
 
 export default Hero;
